@@ -1,5 +1,6 @@
 package com.project;
 
+import com.project.models.MyUser;
 import org.mindrot.jbcrypt.BCrypt;
 import java.util.Scanner;
 

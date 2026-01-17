@@ -1,4 +1,4 @@
-package com.project;
+package com.project.models;
 
 public class Type {
     private int id;

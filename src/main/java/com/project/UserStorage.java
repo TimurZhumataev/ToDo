@@ -1,6 +1,5 @@
 package com.project;
 
-import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -8,11 +7,10 @@ import java.lang.reflect.Type;
 import com.google.gson.reflect.TypeToken;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import org.json.JSONObject;
+import com.project.models.MyUser;
 import org.mindrot.jbcrypt.BCrypt;
 
 public class UserStorage {

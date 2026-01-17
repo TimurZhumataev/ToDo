@@ -5,20 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="836aa145-f15e-4add-9a16-f54b9d55b5f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/MyUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/Services.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/Type.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/UserStorage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/users.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/MyUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/models/MyUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Services.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/models/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/models/Type.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/UserStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/UserStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/users.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +33,7 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="382voSt5TU2jfTmY63BVBubhnCM" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -51,8 +45,10 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -66,8 +62,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.240" />
       </set>
     </attachedChunks>
   </component>
@@ -80,7 +75,11 @@
       <option name="presentableId" value="Default" />
       <updated>1768010657057</updated>
       <workItem from="1768010658213" duration="5107000" />
-      <workItem from="1768212677017" duration="19221000" />
+      <workItem from="1768212677017" duration="20032000" />
+      <workItem from="1768304772774" duration="1211000" />
+      <workItem from="1768311121152" duration="1198000" />
+      <workItem from="1768632851086" duration="2261000" />
+      <workItem from="1768657882562" duration="678000" />
     </task>
     <servers />
   </component>
