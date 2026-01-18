@@ -5,14 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="836aa145-f15e-4add-9a16-f54b9d55b5f3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/Adapters/InstantTypeAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/Adapters/LocalDateTypeAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/json/tasks.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/json/users.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/storage/TaskStorage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/MyUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/models/MyUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Services.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/models/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/models/Type.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/UserStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/UserStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/UserStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/storage/UserStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/models/MyUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/models/MyUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/models/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/models/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/models/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/models/taskType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/users.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,25 +44,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zhuma\IdeaProjects\ToDoList\src\main\java\com\project\json" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

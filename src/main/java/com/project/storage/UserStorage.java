@@ -1,4 +1,4 @@
-package com.project;
+package com.project.storage;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -14,7 +14,7 @@ import com.project.models.MyUser;
 import org.mindrot.jbcrypt.BCrypt;
 
 public class UserStorage {
-    static String path = "src/main/java/com/project/users.json";
+    static String path = "src/main/java/com/project/json/users.json";
 
     public static MyUser saveUser(MyUser user){
         GsonBuilder builder = new GsonBuilder();
@@ -35,6 +35,8 @@ public class UserStorage {
         }
 
         users.add(user);
+        MyUser.idUser(users);
+
         try(FileWriter fw = new FileWriter(path)){
             fw.write(gson.toJson(users));
         }

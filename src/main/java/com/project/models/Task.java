@@ -2,24 +2,56 @@ package com.project.models;
 
 import lombok.Data;
 
+import java.time.Instant;
+import java.time.LocalDate;
 import java.util.Date;
+import java.util.List;
 
 @Data
 public class Task {
     private int id;
+    private int userId;
     private String title;
     private String description;
-    private Date date;
+    private Instant startDate;
+    private LocalDate endDate;
     private String status;
     private int priority;
-    private Type type;
+    private taskType taskType;
 
-    public Task(String title, String description, Date date, String status, int priority, Type type) {
+    Instant instant = Instant.now();
+
+    public Task(int userId, String title, String description, LocalDate endDate, int priority, taskType taskType) {
+        this.userId = userId;
         this.title = title;
         this.description = description;
-        this.date = date;
-        this.status = status;
+        this.startDate = instant;
+        this.endDate = endDate;
+        this.status = "In process";
         this.priority = priority;
-        this.type = type;
+        this.taskType = taskType;
     }
+
+    public Task(int userId, String title, String description, LocalDate endDate, int priority) {
+        this.userId = userId;
+        this.title = title;
+        this.description = description;
+        this.startDate = instant;
+        this.endDate = endDate;
+        this.status = "In process";
+        this.priority = priority;
+    }
+
+    public static List<Task> idTask(List<Task> tasks) {
+            for(int i = 0; i < tasks.size(); i++){
+                if(i == 0){
+                    continue;
+                }
+                if(tasks.get(i).getId() <= tasks.get(i-1).getId()){
+                    tasks.get(i).setId(tasks.get(i-1).getId() + 1);
+                }
+        }
+        return tasks;
+    }
+
 }

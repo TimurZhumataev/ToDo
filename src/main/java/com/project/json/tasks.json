@@ -1,0 +1,24 @@
+[
+  {
+    "id": 0,
+    "userId": 0,
+    "title": "do math",
+    "description": "do math!",
+    "startDate": "2026-01-18T09:38:03.696389500Z",
+    "endDate": "2026-01-19",
+    "status": "In process",
+    "priority": 1,
+    "instant": "2026-01-18T09:38:03.696389500Z"
+  },
+  {
+    "id": 1,
+    "userId": 0,
+    "title": "do OOP!",
+    "description": "do OOP!!",
+    "startDate": "2026-01-18T09:38:27.848321500Z",
+    "endDate": "2026-01-19",
+    "status": "In process",
+    "priority": 2,
+    "instant": "2026-01-18T09:38:27.848321500Z"
+  }
+]
