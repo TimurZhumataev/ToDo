@@ -6,6 +6,7 @@ import com.google.gson.reflect.TypeToken;
 import com.project.Adapters.InstantTypeAdapter;
 import com.project.Adapters.LocalDateTypeAdapter;
 import com.project.models.Task;
+import com.project.models.taskType;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -28,6 +29,7 @@ public class TaskStorage {
     public static Task saveTask(Task task){
 
         List<Task> tasks =  new ArrayList<Task>();
+        List<taskType> types = TypeStorage.loadAllTypes();
 
         try(FileReader fr = new FileReader(path)){
             Type taskListType = new TypeToken<List<Task>>() {}.getType();
@@ -35,6 +37,17 @@ public class TaskStorage {
         }
         catch(Exception e){
             System.err.println("Error while saving task: " + e.getMessage());
+        }
+
+        if(task.getTypeName() != null) {
+            for (taskType type : types) {
+                if (task.getTypeName().equals(type.getName())) {
+                    tasks.add(task);
+                    break;
+                }
+            }
+            System.out.println("This type of tasks doesn't exist!");
+            return null;
         }
 
         tasks.add(task);
@@ -73,6 +86,7 @@ public class TaskStorage {
             System.out.println("Deadline: " + task.getEndDate());
             System.out.println("Priority: " + task.getPriority());
             System.out.println("Status: " + task.getStatus());
+            System.out.println("Task type: " + task.getTypeName());
             System.out.println("------------------------");
             System.out.println();
         };
@@ -97,5 +111,68 @@ public class TaskStorage {
             System.err.println("Error while getting task: " + e.getMessage());
         }
         return null;
+    }
+
+    public static List<Task> getTasksByType(String typeName){
+        List<Task> tasks = new ArrayList<>();
+        List<Task> tasksFinal = new ArrayList<>();
+        if(TypeStorage.loadType(typeName) != null){
+            try(FileReader fr = new FileReader(path)){
+                Type taskListType = new TypeToken<List<Task>>() {}.getType();
+
+                tasks = gson.fromJson(fr, taskListType);
+            }
+            catch(IOException e){
+                System.err.println("Error while getting tasks: " + e.getMessage());
+            }
+
+            for(Task task : tasks){
+                if(task.getTypeName() != null && task.getTypeName().equals(typeName)){
+                    tasksFinal.add(task);
+                    System.out.println();
+                    System.out.println("------------------------");
+                    System.out.println("Title: " + task.getTitle());
+                    System.out.println("Description: " + task.getDescription());
+                    System.out.println("Deadline: " + task.getEndDate());
+                    System.out.println("Priority: " + task.getPriority());
+                    System.out.println("Status: " + task.getStatus());
+                    System.out.println("taskType: " + task.getTypeName());
+                    System.out.println("------------------------");
+                    System.out.println();
+                }
+            }
+            return tasksFinal;
+        }
+        return null;
+    }
+
+    public static List<Task> getTasksByPriority(int priority){
+        List<Task> tasks = new ArrayList<>();
+        List<Task> tasksFinal = new ArrayList<>();
+        try(FileReader fr = new FileReader(path)){
+            Type taskListType = new TypeToken<List<Task>>() {}.getType();
+
+            tasks = gson.fromJson(fr, taskListType);
+        }
+        catch(IOException e){
+            System.err.println("Error while getting tasks: " + e.getMessage());
+        }
+
+        for(Task task : tasks){
+            if(task.getPriority() == (priority)){
+                tasksFinal.add(task);
+                System.out.println();
+                System.out.println("------------------------");
+                System.out.println("Title: " + task.getTitle());
+                System.out.println("Description: " + task.getDescription());
+                System.out.println("Deadline: " + task.getEndDate());
+                System.out.println("Priority: " + task.getPriority());
+                System.out.println("Status: " + task.getStatus());
+                System.out.println("taskType: " + task.getTypeName());
+                System.out.println("------------------------");
+                System.out.println();
+            }
+        }
+        return tasksFinal;
     }
 }

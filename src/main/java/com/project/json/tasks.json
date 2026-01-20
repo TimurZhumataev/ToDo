@@ -20,5 +20,62 @@
     "status": "In process",
     "priority": 2,
     "instant": "2026-01-18T09:38:27.848321500Z"
+  },
+  {
+    "id": 2,
+    "userId": 0,
+    "title": "Do home stuff",
+    "description": "Do home stuff!",
+    "startDate": "2026-01-19T06:58:57.958072800Z",
+    "endDate": "2026-01-19",
+    "status": "In process",
+    "priority": 4,
+    "instant": "2026-01-19T06:58:57.958072800Z"
+  },
+  {
+    "id": 3,
+    "userId": 0,
+    "title": "Test task",
+    "description": "Test task",
+    "startDate": "2026-01-19T07:06:36.960882100Z",
+    "endDate": "2026-01-20",
+    "status": "In process",
+    "priority": 2,
+    "instant": "2026-01-19T07:06:36.960882100Z"
+  },
+  {
+    "id": 4,
+    "userId": 0,
+    "title": "Test task 2",
+    "description": "Test task 2",
+    "startDate": "2026-01-19T07:12:34.568058200Z",
+    "endDate": "2026-01-19",
+    "status": "In process",
+    "priority": 3,
+    "instant": "2026-01-19T07:12:34.568058200Z"
+  },
+  {
+    "id": 5,
+    "userId": 0,
+    "title": "Task2",
+    "description": "Task2",
+    "startDate": "2026-01-19T12:05:49.693079200Z",
+    "endDate": "2026-01-19",
+    "status": "In process",
+    "priority": 4,
+    "typeName": "Work",
+    "instant": "2026-01-19T12:05:49.693079200Z"
+  },
+  {
+    "id": 6,
+    "userId": 0,
+    "title": "Task3",
+    "description": "Task3",
+    "startDate": "2026-01-19T12:08:12.368813200Z",
+    "endDate": "2026-01-19",
+    "status": "In process",
+    "priority": 5,
+    "typeName": "Random",
+    "instant": "2026-01-19T12:08:12.368813200Z"
   }
 ]

@@ -17,11 +17,10 @@ public class Task {
     private LocalDate endDate;
     private String status;
     private int priority;
-    private taskType taskType;
-
+    private String typeName;
     Instant instant = Instant.now();
 
-    public Task(int userId, String title, String description, LocalDate endDate, int priority, taskType taskType) {
+    public Task(int userId, String title, String description, LocalDate endDate, int priority, String typeName) {
         this.userId = userId;
         this.title = title;
         this.description = description;
@@ -29,7 +28,7 @@ public class Task {
         this.endDate = endDate;
         this.status = "In process";
         this.priority = priority;
-        this.taskType = taskType;
+        this.typeName = typeName;
     }
 
     public Task(int userId, String title, String description, LocalDate endDate, int priority) {

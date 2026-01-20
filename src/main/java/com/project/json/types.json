@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "userId": 0,
+    "name": "uni",
+    "description": "university tasks"
+  },
+  {
+    "id": 1,
+    "userId": 0,
+    "name": "uni",
+    "description": "university tasks"
+  },
+  {
+    "id": 2,
+    "userId": 0,
+    "name": "Home",
+    "description": "Home tasks"
+  },
+  {
+    "id": 3,
+    "userId": 0,
+    "name": "Home",
+    "description": "Tasks at home"
+  },
+  {
+    "id": 4,
+    "userId": 0,
+    "name": "Work",
+    "description": "Work tasks"
+  }
+]
