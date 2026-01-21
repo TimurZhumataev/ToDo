@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="836aa145-f15e-4add-9a16-f54b9d55b5f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/json/types.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/storage/TypeStorage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Services.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/json/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/json/tasks.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/models/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/models/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/models/taskType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/models/taskType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/models/taskType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/models/TaskType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/storage/TaskStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/storage/TaskStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/storage/TypeStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/storage/TypeStorage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

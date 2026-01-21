@@ -2,15 +2,13 @@ package com.project;
 
 import com.project.models.MyUser;
 import com.project.models.Task;
-import com.project.models.taskType;
+import com.project.models.TaskType;
 import com.project.storage.TaskStorage;
 import com.project.storage.TypeStorage;
 import com.project.storage.UserStorage;
 import org.mindrot.jbcrypt.BCrypt;
 
 import java.time.LocalDate;
-import java.util.Date;
-import java.util.List;
 import java.util.Scanner;
 
 public class Services {
@@ -75,7 +73,7 @@ public class Services {
         System.out.print("Enter description: ");
         String description = scanner.nextLine();
 
-        taskType type = new taskType(title, description);
+        TaskType type = new TaskType(title, description);
         TypeStorage.saveType(type);
     }
 
@@ -104,7 +102,11 @@ public class Services {
         System.out.println("See my tasks - 2");
         System.out.println("Search tasks by type - 3");
         System.out.println("Search tasks by priority - 4");
-        System.out.println("Return to main menu - 5");
+        System.out.println("Update task - 5");
+        System.out.println("Mark task as finished - 6");
+        System.out.println("Delete task - 7");
+        System.out.println("Delete all my tasks - 8");
+        System.out.println("Return to main menu - 9");
         String option = scanner.nextLine();
 
         if (option.equals("1")) {
@@ -125,8 +127,44 @@ public class Services {
             TaskStorage.getTasksByPriority(priority);
             myTasks(user);
         }else if(option.equals("5")) {
+            System.out.print("Enter name of the task: ");
+            String name = scanner.nextLine();
+            System.out.print("Enter title: ");
+            String title = scanner.nextLine();
+            System.out.print("Enter description: ");
+            String description = scanner.nextLine();
+            System.out.print("Enter deadline date(yyyy-mm-dd): ");
+            String endDate = scanner.nextLine();
+            LocalDate deadline = LocalDate.parse(endDate);
+            System.out.print("Enter priority(from 1 to 5, 1 is the highest priority): ");
+            int priority = scanner.nextInt();
+            scanner.nextLine();
+            System.out.println("Enter type of task(you can skip it): ");
+            String taskType = scanner.nextLine();
+
+            TaskStorage.updateTask(name, title, description, deadline, priority, taskType);
+            myTasks(user);
+        }else if(option.equals("6")){
+            System.out.print("Enter name of the task: ");
+            String name = scanner.nextLine();
+
+            TaskStorage.markTask(name);
+            myTasks(user);
+        }else if(option.equals("7")){
+            System.out.print("Enter name of the task: ");
+            String name = scanner.nextLine();
+
+            TaskStorage.deleteTask(name);
+            myTasks(user);
+        }
+        else if(option.equals("8")){
+            TaskStorage.deleteAllTasks(user);
+            myTasks(user);
+        }
+        else if(option.equals("9")){
             options(user);
-        }else{
+        }
+        else{
             System.out.println("Invalid option!");
             myTasks(user);
         }

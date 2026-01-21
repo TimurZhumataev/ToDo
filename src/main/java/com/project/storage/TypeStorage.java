@@ -5,7 +5,8 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.project.Adapters.InstantTypeAdapter;
 import com.project.Adapters.LocalDateTypeAdapter;
-import com.project.models.taskType;
+import com.project.models.MyUser;
+import com.project.models.TaskType;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -25,20 +26,26 @@ public class TypeStorage {
             .setPrettyPrinting()
             .create();
 
-    public static void saveType(taskType type) {
+    public static void saveType(TaskType type) {
 
-        List<taskType> types = new ArrayList<>();
+        List<TaskType> types = new ArrayList<>();
 
         try(FileReader fr =  new FileReader(path)) {
-            Type tasksType = new TypeToken<List<taskType>>(){}.getType();
+            Type tasksType = new TypeToken<List<TaskType>>(){}.getType();
             types = gson.fromJson(fr, tasksType);
         }
         catch(IOException e){
             System.err.println("Couldn't save type of tasks: " + e.getMessage());
         }
 
+        for(TaskType t : types) {
+            if(t.getName().equals(type.getName())) {
+                System.out.println("Type with this name already exists!");
+                return;
+            }
+        }
         types.add(type);
-        taskType.idType(types);
+        TaskType.idType(types);
 
         try(FileWriter fw = new FileWriter(path)) {
             fw.write(gson.toJson(types));
@@ -48,18 +55,18 @@ public class TypeStorage {
         }
     }
 
-    public static taskType loadType(String typeName) {
-        List<taskType> types = new ArrayList<>();
+    public static TaskType loadType(String typeName) {
+        List<TaskType> types = new ArrayList<>();
 
         try(FileReader fr =  new FileReader(path)) {
-            Type tasksType = new TypeToken<List<taskType>>(){}.getType();
+            Type tasksType = new TypeToken<List<TaskType>>(){}.getType();
             types = gson.fromJson(fr, tasksType);
         }
         catch(IOException e){
             System.err.println("Couldn't save type of tasks: " + e.getMessage());
         }
 
-        for(taskType type : types ) {
+        for(TaskType type : types ) {
             if(typeName.equals(type.getName())) {
                 return type;
             }
@@ -67,11 +74,11 @@ public class TypeStorage {
         return null;
     }
 
-    public static List<taskType> loadAllTypes() {
-        List<taskType> types = new ArrayList<>();
+    public static List<TaskType> loadAllTypes() {
+        List<TaskType> types = new ArrayList<>();
 
         try(FileReader fr =  new FileReader(path)) {
-            Type tasksType = new TypeToken<List<taskType>>(){}.getType();
+            Type tasksType = new TypeToken<List<TaskType>>(){}.getType();
             types = gson.fromJson(fr, tasksType);
         }
         catch(IOException e){
@@ -81,19 +88,19 @@ public class TypeStorage {
         return types;
     }
 
-    public static List<taskType> loadTypes(int userId) {
-        List<taskType> types = new ArrayList<>();
-        List<taskType> userTypes = new ArrayList<>();
+    public static List<TaskType> loadTypes(int userId) {
+        List<TaskType> types = new ArrayList<>();
+        List<TaskType> userTypes = new ArrayList<>();
 
         try(FileReader fr =  new FileReader(path)) {
-            Type tasksType = new TypeToken<List<taskType>>(){}.getType();
+            Type tasksType = new TypeToken<List<TaskType>>(){}.getType();
             types = gson.fromJson(fr, tasksType);
         }
         catch(IOException e){
             System.err.println("Couldn't save type of tasks: " + e.getMessage());
         }
 
-        for( taskType type : types ) {
+        for(TaskType type : types ) {
             if(userId == type.getUserId()) {
                 System.out.println();
                 System.out.println("------------------------");
@@ -104,5 +111,52 @@ public class TypeStorage {
             }
         }
         return userTypes;
+    }
+
+    public static void deleteAllTypesOfTasks(MyUser user) {
+        List<TaskType> types = new ArrayList<>();
+
+        try(FileReader fr =  new FileReader(path)) {
+            Type tasksType = new TypeToken<List<TaskType>>(){}.getType();
+            types = gson.fromJson(fr, tasksType);
+        }
+        catch(IOException e){
+            System.err.println("Couldn't save type of tasks: " + e.getMessage());
+        }
+
+        for(TaskType type : types ) {
+            if(user.getId() == type.getUserId()) {
+                types.remove(type);
+            }
+        }
+        System.out.println("Deleted all types of tasks of " + user.getName());
+    }
+
+    public static void deleteTypeOfTasks(String typeName) {
+        List<TaskType> types = new ArrayList<>();
+
+        try(FileReader fr =  new FileReader(path)) {
+            Type tasksType = new TypeToken<List<TaskType>>(){}.getType();
+            types = gson.fromJson(fr, tasksType);
+        }
+        catch(IOException e){
+            System.err.println("Couldn't save type of tasks: " + e.getMessage());
+        }
+
+        for(TaskType type : types ) {
+            if(!typeName.equals(type.getName())) {
+                types.remove(type);
+                System.out.println("Type " + typeName + " was deleted!");
+
+                try(FileWriter fw = new FileWriter(path)) {
+                    fw.write(gson.toJson(types));
+                }
+                catch(IOException e) {
+                    System.err.println("Couldn't save type of tasks: " + e.getMessage());
+                }
+                return;
+            }
+        }
+        System.out.println("Couldn't find this type of tasks: " + typeName);
     }
 }
